@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.login-btn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  margin: 20px;
+  cursor: pointer;
+}
+.nav-section {
+  display: flex;
+  justify-content: center;
+}
+.menu-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.menu-area {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.search-area {
+  border-bottom: 2px solid gray;
+  padding-bottom: 5px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  position: absolute;
+  right: 15px;
+}
+.search-area input {
+  border: none;
+  outline: none;
+}
+.container {
+  width: 1200px;
+  margin: 50px auto;
+}
+.container.main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  transition: all 0.3s;
+  overflow: hidden;
+}
+.card img {
+  border-radius: 10px;
+  width: 100%;
+}
+.card:hover {
+  transform: scale(1.1);
+}
+.login-form {
+  max-width: 600px;
+  min-height: 500px;
+  margin: 150px auto;
+  background-color: pink;
+  border-radius: 15px;
+  border: 1px solid black;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
+}
+.login-form .login-title {
+  text-align: center;
+  font-size: 54px;
+  padding: 40px;
+  font-weight: 600;
+  margin: 50px auto 30px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  color: transparent;
+}
+.login-form .login-id, .login-form .login-pw {
+  height: 50px;
+  width: 80%;
+  margin: 15px auto;
+  background-color: rgba(255, 111, 145, 0.733);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+.login-form label {
+  padding:0 20px;
+  display: inline-block;
+  min-width: 200px;
+  text-align: center;
+}
+.login-form input {
+  outline: none;
+  border: none;
+  height: 30px;
+  width: 250px;
+  border-radius: 10px;
+  padding: 10px 10px
+}
+.login-form button {
+  outline: none;
+  border: none;
+  padding: 20px 30px;
+  background: #FF6F91;
+  width: 200px;
+  margin: 50px auto;
+  display: block;
+  border-radius: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.container.detail {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.container.detail .left {
+  flex: 1;
+}
+.container.detail .left img{
+  width: 100%;
+}
+.container.detail .right {
+  flex: 1;
+  font-size: 28px;
+}
+.container.detail div {
+  margin: 10px 0;
+}
+.container.detail .right select {
+  background: black;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 10px;
+}
+.container.detail .right button {
+  width: 100%;
+  font-size: 20px;
+  margin-top: 10px;
+  background: black;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+}
+.side-menu {
+  display: none;
+}
+@media screen and (max-width: 1200px) {
+  .menu-area {
+    display: none;
+  }
+  .side-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: -20px;
+    width: 300px;
+    height: 100vh;
+    background: gold;
+    padding-top: 50px;
+    transform: translateX(-100%);
+  }
+  .side-menu.true {
+    transform: translateX(0);
+  }
+  .side-menu.false {
+    transform: translateX(-100%);
+  }
+  .side-btn {
+    position: absolute;
+    top: 0;
+    right: -85px;
+    align-self: end;
+    padding: 30px;
+    font-size: 32px;
+  }
+}
